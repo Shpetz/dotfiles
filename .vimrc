@@ -1,7 +1,7 @@
 " Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+"set background=dark
+"colorscheme solarized
+"let g:solarized_termtrans=1
 
 " Make Vim more useful
 set nocompatible
@@ -42,10 +42,13 @@ set exrc
 set secure
 " Enable line numbers
 set number
+highlight LineNr ctermfg=52
+highlight CursorLineNr cterm=bold ctermfg=95
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
+hi CursorLine cterm=NONE ctermbg=236
 " Make tabs as wide as two spaces
 set tabstop=2
 " Show “invisible” characters
@@ -75,11 +78,6 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
